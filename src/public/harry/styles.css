@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+a {
+  margin-top: 10px;
+  display: block;
+  color: #777;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #aaa;
+}
+
 .error {
   width: 70%;
   margin: auto;
@@ -49,15 +60,7 @@
 }
 
 .can-book-true:hover {
-  background-color: #fdf;
-}
-
-.confirmation-container {
-
-}
-
-.confirmation-text {
-
+  background-color: #dfd;
 }
 
 h1, h2, h3 {

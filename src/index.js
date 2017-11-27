@@ -41,6 +41,7 @@ app.get('/confirm*', (req, res) => {
 
 app.get('/book*', (req, res) => {
   const bookingData = utils.parseBookingData(req.query)
+  console.log(bookingData)
   if (bookingData) {
     request.post({url:'https://private-anon-b166dd0716-housekeepavailability.apiary-mock.com/book/', form: bookingData}, (err, httpResponse, body) => {
       body = JSON.parse(body)

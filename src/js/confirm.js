@@ -6,10 +6,14 @@ module.exports = function () {
     return confirmHTML.toString()
     .replace(/{{date}}/, data.day)
     .replace(/{{hours}}/, data.hours)
-    .replace(/{{data}}/, buildURL(data))
+    .replace(/{{inputs}}/, buildHiddenInputs(data))
   }
 }
 
-function buildURL (data) {
-  return `day=${data.day}&startTime=${data.startTime}&endTime=${data.endTime}&hours=${data.hours}`
+function buildHiddenInputs (data) {
+  let html = ''
+  for (let item in data) {
+    html += `<input type="hidden" name="${item}" value=${data[item]}>`
+  }
+  return html
 }

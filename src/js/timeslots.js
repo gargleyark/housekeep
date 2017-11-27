@@ -8,7 +8,7 @@ module.exports = function () {
         .replace('{{start}}', time.start)
         .replace('{{end}}', time.end)
         .replace('{{possible}}', time.possible)
-        .replace('{{href}}', time.possible && `href="/confirm/?day=${data.date.day}&startTime=${time.start}&endTime=${time.end}&hours=${data.hours}"` || '')
+        .replace('{{href}}', time.possible && `href="/confirm?day=${data.date.day}&startTime=${time.start}&endTime=${time.end}&hours=${data.hours}"` || '')
     }).join('')
   }
 }
