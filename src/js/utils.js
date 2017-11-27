@@ -8,7 +8,6 @@ module.exports = {
     return (data.day && data.startTime && data.endTime && data.hours && data || undefined)
   },
   parseBookingData: (data) => {
-    console.log('data is', data)
     if (data.day && data.startTime && data.endTime && data.hours && data.id) {
       return {
         day: data.day,

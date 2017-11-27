@@ -8,7 +8,6 @@ const container = new AppContainer()
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
-  console.log(req.query)
   res.send(container.render())
 })
 
@@ -41,12 +40,10 @@ app.get('/confirm*', (req, res) => {
 
 app.get('/book*', (req, res) => {
   const bookingData = utils.parseBookingData(req.query)
-  console.log(bookingData)
   if (bookingData) {
     request.post({url:'https://private-anon-b166dd0716-housekeepavailability.apiary-mock.com/book/', form: bookingData}, (err, httpResponse, body) => {
       body = JSON.parse(body)
       if (body && body.success) {
-        console.log('yes')
         res.send(container.render({bookingData, cleaner: body.cleaner}))
       } else {
         res.send(container.render({
