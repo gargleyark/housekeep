@@ -1,0 +1,29 @@
+.day::before {
+    content: 'day: ';
+}
+
+.day {
+    background: #ddd;
+}
+
+.timeslots {
+    background: white;
+}
+
+.timeslots > a {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid;
+}
+
+.can-book-false {
+  color: #ddd;
+}
+
+.can-book-true {
+  cursor: pointer;
+}
+
+.can-book-true:hover {
+  background-color: #fdf;
+}

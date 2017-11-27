@@ -1,11 +1,12 @@
 const fs = require('fs')
 const appTemplate = fs.readFileSync('src/public/html/index.html')
 const header = fs.readFileSync('src/public/html/header.html')
-const timeslots = require('./timeslots.js')
 const Form =  require('./form.js')
 const form = new Form()
-
-console.log(form)
+const Day =  require('./day.js')
+const day = new Day()
+const Error =  require('./error.js')
+const error = new Error()
 
 module.exports = function () {
   this.render = data => {
@@ -16,8 +17,16 @@ module.exports = function () {
 }
 
 function getApp (data) {
+  data = JSON.parse(data)
   if (data) {
-    
+    if (data.error) {
+      return error.render()
+        + form.render()
+    } else {
+      return data.map(function (date) {
+        return day.render(date)
+      }).join('')
+    }
   } else {
     return form.render()
   }
