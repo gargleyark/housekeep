@@ -4,9 +4,9 @@ const Timeslots =  require('./timeslots.js')
 const timeslots = new Timeslots()
 
 module.exports = function () {
-  this.render = times => {
+  this.render = data => {
     return dayHTML.toString()
-      .replace('{{day}}', times.day)
-      .replace('{{timeslots}}', timeslots.render(times.startTimes))
+      .replace('{{day}}', data.date.day)
+      .replace('{{timeslots}}', timeslots.render(data))
   }
 }

@@ -1,20 +1,22 @@
 <div>
-  I want a cleaner in <input type="text" placeholder="SW1A 1AA"> on
-  <select placeholder="dd">
-    {{dd}}
-  </select>
-  <select placeholder="mm">
-    {{mm}}
-  </select>
-  <select placeholder="yy">
-    {{yy}}
-  </select>
-  for
-  <select>
-    {{hours}}
-  </select>
-  hours.
-  <div>
-    <button>Clean it up!</button>
-  </div>
+  <form action="/getTimes">
+    I want a cleaner in <input type="text" placeholder="SW1A 1AA" name="postCode" required> on
+    <select placeholder="dd" name="dd" required>
+      {{dd}}
+    </select>
+    <select placeholder="mm" name="mm" required>
+      {{mm}}
+    </select>
+    <select placeholder="yy" name="yy" required>
+      {{yy}}
+    </select>
+    for
+    <select name="hours" required>
+      {{hours}}
+    </select>
+    hours.
+    <div>
+      <input type="submit" value="Clean it up!" class="submit">
+    </div>
+  </form>
 </div>

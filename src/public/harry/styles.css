@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.error {
+  width: 70%;
+  margin: auto;
+  border: 1px dotted red;
+  color: red;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header {
+  background: #cee;
+}
+
 .day::before {
     content: 'day: ';
 }
 
 .day {
     background: #ddd;
+    margin-top: 20px;
 }
 
 .timeslots {
@@ -14,16 +35,39 @@
   display: inline-block;
   width: 100px;
   border: 1px solid;
+  text-decoration: none;
+  color: #333;
+  margin: 5px;
 }
 
-.can-book-false {
+.timeslots > a.can-book-false {
   color: #ddd;
 }
 
-.can-book-true {
+.timeslots > a.can-book-true {
   cursor: pointer;
 }
 
 .can-book-true:hover {
   background-color: #fdf;
+}
+
+.confirmation-container {
+
+}
+
+.confirmation-text {
+
+}
+
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #555;
+}
+
+.submit, button {
+  background: darkblue;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
 }

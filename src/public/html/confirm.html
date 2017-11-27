@@ -1,0 +1,10 @@
+<div>
+  <div class="confirm">You are booking a cleaner on {{date}} for {{hours}} hours.</div>
+  <h3>
+    Enter your property ID below and press book!
+  </h3>
+  <input type="text" placeholder="propertyID" id="propertyID">
+  <div>
+    <button onclick="window.location.href = '/book/?{{data}}&id=' + document.getElementById('propertyID').value">Book!</button>
+  </div>
+</div>
