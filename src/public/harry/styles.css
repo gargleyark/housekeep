@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 
 * {
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
 }
 
@@ -36,10 +36,15 @@ a:hover {
 .day {
     background: #ddd;
     margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    text-transform: uppercase;
 }
 
 .timeslots {
     background: #efefef;
+    padding: 15px 0px;
 }
 
 .timeslots > a {
@@ -50,6 +55,7 @@ a:hover {
   color: #333;
   margin: 5px;
   border-radius: 6px;
+  padding: 10px 1px;
 }
 
 .timeslots > a.can-book-false {
