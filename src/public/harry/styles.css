@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .timeslots {
-    background: white;
+    background: #efefef;
 }
 
 .timeslots > a {
@@ -49,18 +49,27 @@ a:hover {
   text-decoration: none;
   color: #333;
   margin: 5px;
+  border-radius: 6px;
 }
 
 .timeslots > a.can-book-false {
-  color: #ddd;
+  color: #ccc;
+  border-color: #ddd;
 }
 
 .timeslots > a.can-book-true {
   cursor: pointer;
 }
 
+.day-block {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
 .can-book-true:hover {
   background-color: #dfd;
+  border-color: #4f4;
 }
 
 h1, h2, h3 {

@@ -3,8 +3,8 @@ const appTemplate = fs.readFileSync('src/public/html/index.html')
 const header = fs.readFileSync('src/public/html/header.html')
 const Form =  require('./form.js')
 const form = new Form()
-const Day =  require('./day.js')
-const day = new Day()
+const Daypicker =  require('./daypicker.js')
+const daypicker = new Daypicker()
 const Error =  require('./error.js')
 const error = new Error()
 const Confirm =  require('./confirm.js')
@@ -26,13 +26,7 @@ function getApp (data) {
       return error.render(data.error) +
         form.render()
     } else if (data.queryData) {
-      const queryData = JSON.parse(data.queryData)
-      return queryData.map(function (date) {
-        return day.render({
-          date,
-          hours: data.formData.hours
-        })
-      }).join('')
+      return daypicker.render(data)
     } else if (data.confirmationData) {
       return confirm.render(data.confirmationData)
     } else if (data.bookingData) {
